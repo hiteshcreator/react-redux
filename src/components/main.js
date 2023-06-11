@@ -1,7 +1,9 @@
+import { connect} from 'react-redux'
 import React from 'react'
-import { addTodo } from '../redux/actions/actions'
+import { addTodo,appStatus } from '../redux/actions/actions'
 
-const main = () => {
+const main = (props) => {
+  console.log("props",props,props.appStatus(true))
   return (
     <div>
       <h2>dispatch</h2>
@@ -13,8 +15,9 @@ const main = () => {
 const mapStateToProps=(state)=>({})
 
 const mapDispatchToProps=(dispatch)=> ({
-    addTodo: (todo)=> ( dispatch (addTodo (todo)))
+    addTodo: (todo)=> ( dispatch (addTodo (todo))),
+    appStatus: (todo)=> ( dispatch (appStatus (todo)))
 })
 
 
-export default main
+export default connect(mapStateToProps,mapDispatchToProps)(main)

@@ -6,5 +6,6 @@ const rootReducer = combineReducers({
 });
 
 const store = createStore(rootReducer);
+console.log("storee--",store)
 
 export default store;
