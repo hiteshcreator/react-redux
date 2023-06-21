@@ -11,9 +11,9 @@ const main = (props) => {
   )
 }
 
-
 const mapStateToProps=(state)=>({})
 
+//*** use this function for getting the redux function */
 const mapDispatchToProps=(dispatch)=> ({
     addTodo: (todo)=> ( dispatch (addTodo (todo))),
     appStatus: (todo)=> ( dispatch (appStatus (todo)))
