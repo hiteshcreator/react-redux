@@ -6,7 +6,7 @@ const main = (props) => {
   console.log("props",props,props.appStatus(true))
   return (
     <div>
-      <h2>dispatch</h2>
+      <h2>dispatch Todo</h2>
     </div>
   )
 }
